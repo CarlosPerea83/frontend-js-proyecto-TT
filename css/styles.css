@@ -11,8 +11,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  background-image: url("../img/fondo1.png");
-  background-size: cover;
+  background-color: #045a6f;
   color: #f9fafa;
 
   display: flex;
