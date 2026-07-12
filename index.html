@@ -3,42 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
       <div class="div-logo">
-        <a href="./index.html" class="logo">NANO COMPUTER</a>
+        <a class="logo" href="./index.html">NANO COMPUTER</a>
       </div>
 
       <nav class="header-nav">
         <ul>
-          <li><a href="./index.html">INICIO</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
+          <li>
+            <a href="./index.html">INICIO</a>
+          </li>
+          <li>
+            <a href="./pages/contacto.html">Contacto</a>
+          </li>
+          <!--👉 Agregar un link al carrito, con un ID para el contador -->
+          <li>
+            <a href="./pages/carrito.html" class="carrito-icono"
+              >🛒<span id="contador-carrito">0</span></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <h1 class="titulo-home text-secondary">Bienvenido a nuestro sitio</h1>
+      <h1 class="titulo-home text-secondary">Bienvenidos a la tienda</h1>
       <p class="parrafo">
-        Este es el contenido principal de la página de inicio Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Incidunt, exercitationem
-        laboriosam? Fuga id asperiores necessitatibus rem culpa dolor expedita
-        omnis earum, sit neque doloribus voluptatum vitae, dicta atque ratione,
-        qui quasi nulla at! Voluptatibus eveniet sit quis quos vero aliquid ?
+        NANO COMPUTER , donde comenzó a dar sus primeros pasos como una tienda
+        de artículos tecnológicos, acompañado de las últimas novedades y los
+        mejores precios del mercado.
       </p>
 
       <section>
-        <h2 class="titulo-productos text-secondary">Nuestros Productos</h2>
-        <div class="contenedor-tarjetas">
-          <article class="card text-secondary">
+        <h2 class="titulo-productos">Nuestros productos</h2>
+
+        <!--👉 Agregar un ID al div, ahora lo necesitamos -->
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
+          <!--<article class="card text-secondary">
             <img
               src="./img/Monitor_Gamer_LG_Ultragear.jpg"
               alt="imagen de monitor gamer"
@@ -84,18 +92,20 @@
             <button class="btn bg-secondary text dark">
               Agregar al carrito
             </button>
-          </article>
+          </article>--->
         </div>
       </section>
     </main>
     <footer>
-      <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+      <p>&copy; 2026 Carlos Perea. Todos los derechos reservados.</p>
       <nav>
         <ul class="footer-list">
-          <li><img src="./img/instagram.png" alt="logo de Instagram" /></li>
-          <li><img src="./img/whatsapp.png" alt="logo de WhatsApp" /></li>
+          <li><img src="./img/instagram.png" alt="logo de instagram" /></li>
+          <li><img src="./img/whatsapp.png" alt="logo de whatsapp" /></li>
         </ul>
       </nav>
     </footer>
+    <!--👉 Agregar type module y enlace al index.js -->
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

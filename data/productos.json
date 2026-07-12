@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "nombre": "Monitor Gamer LG Ultragear 27",
+    "precio": "150.000",
+    "img": "img/Monitor_Gamer_LG_Ultragear.jpg"
+  },
+  {
+    "id": "2",
+    "nombre": "Disco Solido SSD 480GB",
+    "precio": "80.000",
+    "img": "img/disco_solido_ssd_480.jpg"
+  },
+  {
+    "id": "3",
+    "nombre": "Disco Solido SSD M2 512GB",
+    "precio": "120.000",
+    "img": "img/disco_solido_ssd_m2_512.jpg"
+  },
+  {
+    "id": "4",
+    "nombre": "Memoria ADATA DDR5 48GB",
+    "precio": "200.000",
+    "img": "img/Memoria_ADATA_DDR5_48GB.jpg"
+  }
+]

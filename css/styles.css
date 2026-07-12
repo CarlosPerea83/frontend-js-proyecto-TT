@@ -9,11 +9,12 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  background-color: #045a6f;
+  background: #045a6f;
   color: #f9fafa;
 
+  /* Lo nuevo */
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -24,7 +25,11 @@ main {
   margin: auto;
   padding-bottom: 2rem;
 
+  /* Propiedad "flex" agrupa las 3 cosas: grow, shrink y basis */
+  /* equivale a: flex: 1 1 0
+  Puede crecer, puede achicarse, arranca sin tamaño base (0) */
   flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,8 +64,9 @@ footer {
   background: #080241;
   color: #f9fafa;
   width: 100%;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -78,34 +84,126 @@ footer {
   padding: 2rem;
 }
 
-.header-nav {
-  margin-right: 2rem;
-}
-
 .header-nav ul,
 footer .footer-list {
   list-style: none;
+
+  /* Hago que los li se acomoden en fila con una distancia entre ellos de 2rem */
   display: flex;
   gap: 2rem;
 }
 
-.footer-list img {
-  width: 5rem;
-  padding: 0.5rem;
+.footer-list li {
+  padding: 2rem;
 }
 
+.footer-list img {
+  width: 5rem;
+}
+
+footer p {
+  padding: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   COLORES                                  */
+/* -------------------------------------------------------------------------- */
 .bg-primary {
   background-color: #07627b;
 }
+
 .bg-secondary {
   background-color: #d6ea3b;
 }
+
 .text-light {
   color: #f2f5f6;
 }
+
+.text-dark {
+  color: #0a0a0a;
+}
+
 .text-secondary {
   color: #d6ea3b;
 }
+
+.btn {
+  background: #07627b;
+  color: #f9fafa;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.6rem;
+  border-radius: 1rem;
+}
+
+.btn-eliminar-carrito {
+  background-color: #d6ea3b;
+  border: 2px solid #0a0a0a;
+}
+.btn-vaciar-carrito {
+  background-color: #d6ea3b;
+  color: #1d1a20;
+}
+.btn-vaciar-carrito:hover {
+  background-color: #0a0a0a;
+}
+
+header,
+footer {
+  background: #080241;
+  color: #f9fafa;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.div-logo {
+  margin-left: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.logo,
+.header-nav ul li a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: inherit;
+  display: inline-block;
+  padding: 2rem;
+}
+
+.header-nav {
+  margin-right: 2rem;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+footer p {
+  margin: 2rem;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+footer nav ul li {
+  padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HOME                                    */
+/* -------------------------------------------------------------------------- */
 
 .parrafo {
   width: 80%;
@@ -117,23 +215,25 @@ footer .footer-list {
 .contenedor-tarjetas {
   margin-top: 2rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
-.card {
-  margin: 1rem;
 
+.card {
   background-color: #0dabd7;
+  color: #0a0a0a;
   width: 40rem;
 
   border-radius: 1rem;
   overflow: hidden;
 
+  /* Nuevo: */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
   padding-bottom: 2rem;
 }
 
@@ -143,36 +243,37 @@ footer .footer-list {
   object-fit: cover;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  CONTACTO                                  */
+/* -------------------------------------------------------------------------- */
 .titulo-contacto {
-  margin-top: 2rem 0;
+  margin: 2rem 0;
 }
+
 .form-contacto {
   background-color: #3bead3;
   color: #07627b;
   width: 100%;
-  text-align: center;
-  padding: 1rem;
+  max-width: 50rem;
   font-size: 2rem;
+  padding: 3rem;
   border-radius: 1rem;
 
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* sutil */
 }
 
 .grupo-input {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin: 2rem;
+  margin-bottom: 2rem;
 }
 
 .grupo-input input,
 .grupo-input textarea {
   border: none;
   background-color: transparent;
-  border-bottom: 2px solid #000000;
+  border-bottom: solid 2px #000000;
   margin-bottom: 3rem;
 }
 
@@ -181,17 +282,24 @@ footer .footer-list {
   resize: vertical;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                              👉Nuevo: Carrito                              */
+/* -------------------------------------------------------------------------- */
+.mensaje-carrito-vacio {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.acciones-carrito {
+  margin-top: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   header,
   footer {
     flex-direction: column;
-  }
-  .contenedor-tarjetas {
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-nav,
-  .div-logo {
-    margin: 0;
   }
 }
